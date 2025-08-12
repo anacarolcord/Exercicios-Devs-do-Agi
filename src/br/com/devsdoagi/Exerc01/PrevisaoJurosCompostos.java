@@ -8,17 +8,20 @@ public class PrevisaoJurosCompostos {
         double taxa = 0.02;
 
         calcularJurosCompostos(capitalInicial,taxa,meses);
-
-
     }
 
     public static double[] calcularJurosCompostos(double valorInicial, double taxa, int meses){
         int i;
+        double valorAtualizado=0;
         double [] valoresFuturos = new double[meses];
         //double montante = valorInicial*taxa*meses;
         for(i=0;i<meses;i++){
-            valoresFuturos[i] = valorInicial*(Math.pow(1+(taxa),meses));
-            System.out.println("Valor do investimento no mês "+(i+1)+(valoresFuturos[i]));
+            valorAtualizado = valorInicial*(Math.pow(1+(taxa),meses));
+            valorInicial = valorAtualizado;
+
+            valoresFuturos[i]=valorAtualizado;
+
+            System.out.println("Valor do investimento no mês "+(i+1)+" - "+(valoresFuturos[i]));
         }
 
         return valoresFuturos;
