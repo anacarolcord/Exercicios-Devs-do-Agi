@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AnaliseSaldoContaCorrente {
 
-    public static double []saldoFinal(double [][] saldos, int cliente) {
+    public static double saldoFinal(double [][] saldos, int cliente) {
         Scanner in = new Scanner(System.in);
         System.out.println("Digite o cliente que deseja ver o saldo final: ");
         cliente = in.nextInt();
@@ -16,7 +16,7 @@ public class AnaliseSaldoContaCorrente {
 
         }
 
-        return saldoFinalf;
+        return 0;
     }
 
 
