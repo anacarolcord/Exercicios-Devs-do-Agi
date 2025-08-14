@@ -23,8 +23,9 @@ public class PrecoProduto {
 
 
     public static void main(String[] args) {
-        double [][] precoProduto = { {100,120,99},
-                                     {12,23,15}}  ;
+        double [][] precoProduto = { {100,1},
+                                     {12,23},
+                                     {45,4}}  ;
 
         encontrarMenorPrecoProduto(precoProduto);
     }
