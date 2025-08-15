@@ -109,18 +109,20 @@ public class Hackaton02 {
                 for (int ano = 0; ano <= anos; ano++) {
                     System.out.printf("%-6d", idade + ano);
                     for (int i = 0; i < 1; i++) {
-                        System.out.printf("%15s", String.format("R$ %, .2f", matriz[i][ano]));
+
                     }
                     System.out.println();
                 }
-            }
-            else if (escolhauser == 3){
+            } else if (escolhauser == 3) {
                 System.out.println("Matriz de cenários");
                 System.out.printf("%-6s", "Ano");
                 for (double taxa : taxaanuais) {
                     System.out.printf("%15s", String.format("Cenário %.0f%%", taxa * 100));
                 }
-                System.out.println();
+            }
+
+        }while(escolhauser <4);}}
+
 
                 /*Corpo da tabela
                 int anos = idadeaposentadoria- idade;
@@ -160,4 +162,4 @@ public class Hackaton02 {
         }
     }
 }
-}
+}*/
