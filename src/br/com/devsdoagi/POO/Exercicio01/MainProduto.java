@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class MainProduto {
     public static void main(String[] args) {
-        Produto produto = new Produto();
+        Produto produto;
+        produto = new Produto();
 
 
-       produto.preco = 34.89;
+        produto.preco = 34.89;
        produto.nome = "Arroz";
 
        produto.exibirDados();
