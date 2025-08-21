@@ -2,7 +2,7 @@ package br.com.devsdoagi.Heranca.Exercicio01;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        HerancaContaBancaria cbpai = new HerancaContaBancaria();
+        HerancaContaBancaria cbpai = new ContaCorrente();
         ContaCorrente cc = new ContaCorrente();
         Scanner in = new Scanner(System.in);
 
