@@ -11,7 +11,7 @@ public class MediaMovel {
         int dias = in.nextInt();
 
         if (dias < 3) {
-            System.out.println("Quantidade insuficiente!");
+            System.out.println("Quantidade insuficiente! ");
         } else {
             acoes = new double[dias];
 
