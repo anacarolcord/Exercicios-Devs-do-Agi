@@ -10,6 +10,8 @@ public class Emprestimos {
         adicionarParcela(emprestimos,"3456",300);
         totalDevedor(emprestimos,"3456");
         System.out.println(totalDevedor(emprestimos,"3456"));
+
+        exibirRelatorioDevedor(emprestimos);
     }
 
     public static double totalDevedor(Map<String, List<Double>> emprestimos, String cpf){
@@ -24,10 +26,18 @@ public class Emprestimos {
     }
 
     public static void adicionarParcela(Map<String, List<Double>> emprestimos, String cpf, double valorParcela){
-        List<Double> parcelas = new ArrayList<>();
-        parcelas.add(valorParcela);
+        if(!emprestimos.containsKey(cpf)){
+            List<Double> parcelas = new ArrayList<>();
+            parcelas.add(valorParcela);
+            emprestimos.put(cpf, parcelas);
+        }else{
+            emprestimos.get(cpf).add(valorParcela);
+        }
 
-        emprestimos.put(cpf, parcelas);
+    }
+
+    public static void exibirRelatorioDevedor(Map<String, List<Double>> emprestimos){
+        System.out.println("Exibindo relatório referente ao CPF: "+emprestimos.keySet()+"\nValores: "+emprestimos.values());
     }
 
 

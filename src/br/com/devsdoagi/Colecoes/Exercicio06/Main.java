@@ -8,6 +8,14 @@ public class Main {
 
         List<Cliente> clientes = new ArrayList<>();
 
+        adicionarCliente(clientes,"Rauni",2300);
+        adicionarCliente(clientes,"Nayani",2344);
+        adicionarCliente(clientes,"Ana",3000);
+
+        ordernarPorSaldo(clientes);
+
+        exibirClientes(clientes);
+
 
     }
 
@@ -17,6 +25,15 @@ public class Main {
     }
 
     public static void ordernarPorSaldo(List<Cliente> clientes){
-       
+        clientes.sort((c1, c2) -> Double.compare(c2.saldo, c1.saldo));
+
+
+    }
+
+    public static void exibirClientes(List<Cliente> clientes){
+
+        for(Cliente cliente : clientes){
+        System.out.println("Exibindo cliente "+cliente.getNome()+"\n Saldos: "+ cliente.getSaldo());
+        }
     }
 }

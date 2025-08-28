@@ -1,4 +1,6 @@
 package br.com.devsdoagi.Colecoes.Exercicio02;
+import br.com.devsdoagi.Overriding.Exercicio02.CDB;
+
 import java.util.Set;
 import java.util.HashSet;
 
@@ -10,6 +12,8 @@ public class Investimento {
         adicionarProduto(produtos,"TESOURO DIRETO");
         adicionarProduto(produtos,"CRIPTOMOEDA");
         adicionarProduto(produtos,"CRIPTOMOEDA");
+
+        exibirProdutos(produtos,"CDB");
     }
 
     public static void adicionarProduto(Set<String> produtos, String nomeProduto){
